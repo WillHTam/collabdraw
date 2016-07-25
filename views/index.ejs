@@ -9,7 +9,8 @@
 
     <style>
       .col { display: flex; }
-      .section { border: 2px solid black; width: 100px; height: 100px;}
+      .section { border: 0.5px solid black; width: 75px; height: 75px;}
+      .toggler { background-color: black; }
     </style>
   </head>
   <body>
@@ -19,35 +20,47 @@
       <div class="section" id="2"></div>
       <div class="section" id="3"></div>
       <div class="section" id="4"></div>
+      <div class="section" id="5"></div>
     </div>
     <div class="col">
-      <div class="section" id="5"></div>
       <div class="section" id="6"></div>
       <div class="section" id="7"></div>
       <div class="section" id="8"></div>
       <div class="section" id="9"></div>
-    </div>
-    <div class="col">
       <div class="section" id="10"></div>
       <div class="section" id="11"></div>
+    </div>
+    <div class="col">
       <div class="section" id="12"></div>
       <div class="section" id="13"></div>
       <div class="section" id="14"></div>
-    </div>
-    <div class="col">
       <div class="section" id="15"></div>
       <div class="section" id="16"></div>
       <div class="section" id="17"></div>
-      <div class="section" id="18"></div>
-      <div class="section" id="19"></div>
     </div>
     <div class="col">
+      <div class="section" id="18"></div>
+      <div class="section" id="19"></div>
       <div class="section" id="20"></div>
       <div class="section" id="21"></div>
       <div class="section" id="22"></div>
       <div class="section" id="23"></div>
-      <div class="section" id="24"></div>
     </div>
+    <div class="col">
+      <div class="section" id="24"></div>
+      <div class="section" id="25"></div>
+      <div class="section" id="26"></div>
+      <div class="section" id="27"></div>
+      <div class="section" id="28"></div>
+      <div class="section" id="29"></div>
+    </div>
+    <div class="col">
+      <div class="section" id="30"></div>
+      <div class="section" id="31"></div>
+      <div class="section" id="32"></div>
+      <div class="section" id="33"></div>
+      <div class="section" id="34"></div>
+      <div class="section" id="35"></div>
     </div>
 
     <script>
@@ -61,7 +74,8 @@
       socket.on('section', function(id) {
         console.log('id received: ' + id)
         // $("#"+id).append($('<h2>').text(id))
-        $("#"+id).css("background-color", "black")
+        // $("#"+id).css("background-color", "black")
+        $("#"+id).toggleClass("toggler")
       })
 
     </script>
